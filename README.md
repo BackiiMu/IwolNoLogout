@@ -1,14 +1,15 @@
 # 이월짱 로그아웃할 수 없습니다
 
-이 저장소는 이월짱 팬게임 **이월짱: 로그아웃할 수 없습니다!**의 기획, 아트 기준, 향후 Godot 프로젝트를 함께 관리한다.
+이 저장소는 이월짱 팬게임 **이월짱: 로그아웃할 수 없습니다!**의 기획, 아트 기준, Godot 프로젝트를 함께 관리한다.
 
 ## 현재 상태
 
 - 단계: 프리프로덕션
+- 기술 단계: P2 이동 샌드박스 구현 완료, G2 수동 검수 대기
 - 게임 형식: 저해상도 2D 픽셀아트 탑다운 액션 어드벤처 + 비주얼노벨식 대화
 - 주인공: 남성 스트리머 이월짱
 - 개발 프로젝트명: `IwolNoLogout`
-- 목표 엔진: Godot 4.x
+- 검증 엔진: Godot 4.7.2
 - 내부 해상도: `320x180`
 - 첫 목표: 프롤로그, 후보 1라운드, 기본 이동, 지원형 쿠나이 전투를 포함한 20분 세로형 시제품
 
@@ -18,9 +19,10 @@
 
 1. `AGENTS.md` — 작업 규칙과 반드시 지킬 확정사항
 2. `docs/PROJECT_STATUS.md` — 현재 진행 상황과 다음 작업
-3. `docs/GAME_DESIGN.md` — 게임 기획의 작업용 Markdown 요약
-4. `docs/DECISIONS.md` — 결정 이력과 변경 이유
-5. `docs/이월짱_로그아웃할_수_없습니다_종합_게임_기획서.docx` — 편집 가능한 종합 기획서
+3. `docs/ROADMAP.md` — 전체 개발 순서, 체크리스트, 단계별 완료 기준
+4. `docs/GAME_DESIGN.md` — 게임 기획의 작업용 Markdown 요약
+5. `docs/DECISIONS.md` — 결정 이력과 변경 이유
+6. `docs/이월짱_로그아웃할_수_없습니다_종합_게임_기획서.docx` — 편집 가능한 종합 기획서
 
 ## 저장소 구조
 
@@ -35,9 +37,14 @@
 │   ├── DECISIONS.md
 │   ├── GAME_DESIGN.md
 │   ├── PROJECT_STATUS.md
+│   ├── ROADMAP.md
 │   └── 이월짱_로그아웃할_수_없습니다_종합_게임_기획서.docx
-└── game/                 # 추후 Godot 프로젝트 위치
+└── game/                 # Godot 프로젝트와 실행·검증 안내
 ```
+
+## Godot 프로젝트 실행
+
+Godot 4.7.2에서 `game/project.godot`을 연 뒤 프로젝트를 실행한다. 세부 조작과 검증 명령은 `game/README.md`에 정리되어 있다.
 
 ## 작업 재개 방법
 
@@ -46,7 +53,7 @@ git pull
 git status
 ```
 
-그다음 `AGENTS.md`와 `docs/PROJECT_STATUS.md`를 읽고 `다음 작업`의 첫 미완료 항목부터 진행한다. 확정사항을 바꾸면 반드시 `docs/DECISIONS.md`에 이유와 영향을 기록하고, 작업 종료 전 `docs/PROJECT_STATUS.md`를 갱신한다.
+그다음 `AGENTS.md`와 `docs/PROJECT_STATUS.md`를 읽는다. `docs/PROJECT_STATUS.md`가 가리키는 현재 단계에서 `docs/ROADMAP.md`의 첫 미완료 항목부터 진행한다. 확정사항을 바꾸면 반드시 `docs/DECISIONS.md`에 이유와 영향을 기록하고, 작업 종료 전 현황과 체크리스트를 갱신한다.
 
 ## 권리 원칙
 

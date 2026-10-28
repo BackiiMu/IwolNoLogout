@@ -1,0 +1,125 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/system/test_room.gd" id="1_room"]
+[ext_resource type="Script" path="res://scripts/debug/debug_overlay.gd" id="2_debug"]
+[ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="3_player"]
+[ext_resource type="Script" path="res://scripts/interactables/test_terminal.gd" id="4_terminal"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_horizontal_wall"]
+size = Vector2(640, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vertical_wall"]
+size = Vector2(16, 360)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obstacle"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_terminal"]
+size = Vector2(24, 20)
+
+[node name="TestRoom" type="Node2D"]
+script = ExtResource("1_room")
+
+[node name="Boundaries" type="StaticBody2D" parent="."]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Top" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(320, 8)
+shape = SubResource("RectangleShape2D_horizontal_wall")
+
+[node name="Bottom" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(320, 352)
+shape = SubResource("RectangleShape2D_horizontal_wall")
+
+[node name="Left" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(8, 180)
+shape = SubResource("RectangleShape2D_vertical_wall")
+
+[node name="Right" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(632, 180)
+shape = SubResource("RectangleShape2D_vertical_wall")
+
+[node name="Obstacles" type="StaticBody2D" parent="."]
+collision_layer = 1
+collision_mask = 0
+
+[node name="LeftDesk" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2(160, 180)
+shape = SubResource("RectangleShape2D_obstacle")
+
+[node name="RightDesk" type="CollisionShape2D" parent="Obstacles"]
+position = Vector2(480, 180)
+shape = SubResource("RectangleShape2D_obstacle")
+
+[node name="Interactables" type="Node2D" parent="."]
+
+[node name="TestTerminal" type="Area2D" parent="Interactables"]
+position = Vector2(240, 88)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("4_terminal")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/TestTerminal"]
+shape = SubResource("RectangleShape2D_terminal")
+
+[node name="Player" parent="." instance=ExtResource("3_player")]
+position = Vector2(96, 96)
+
+[node name="Hud" type="CanvasLayer" parent="."]
+
+[node name="HelpPanel" type="ColorRect" parent="Hud"]
+offset_left = 4.0
+offset_top = 158.0
+offset_right = 316.0
+offset_bottom = 176.0
+color = Color(0.016, 0.027, 0.055, 0.9)
+
+[node name="HelpLabel" type="Label" parent="Hud/HelpPanel"]
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 308.0
+offset_bottom = 16.0
+theme_override_colors/font_color = Color(0.91, 0.93, 0.96, 1)
+theme_override_font_sizes/font_size = 7
+text = "이동 WASD·방향키   상호작용 E   F3 디버그   F11 전체 화면"
+horizontal_alignment = 1
+
+[node name="MessagePanel" type="ColorRect" parent="Hud"]
+visible = false
+offset_left = 64.0
+offset_top = 126.0
+offset_right = 256.0
+offset_bottom = 150.0
+color = Color(0.055, 0.102, 0.188, 0.95)
+
+[node name="MessageLabel" type="Label" parent="Hud/MessagePanel"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 188.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(0.141, 0.78, 0.851, 1)
+theme_override_font_sizes/font_size = 7
+text = "상호작용 성공"
+horizontal_alignment = 1
+
+[node name="DebugOverlay" type="CanvasLayer" parent="."]
+script = ExtResource("2_debug")
+
+[node name="Panel" type="ColorRect" parent="DebugOverlay"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 316.0
+offset_bottom = 18.0
+color = Color(0.016, 0.027, 0.055, 0.86)
+
+[node name="InfoLabel" type="Label" parent="DebugOverlay/Panel"]
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 308.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0.141, 0.78, 0.851, 1)
+theme_override_font_sizes/font_size = 7
+text = "P2 이동 테스트"
+horizontal_alignment = 1
+

@@ -7,9 +7,10 @@
 아래 순서로 문서를 읽는다.
 
 1. `docs/PROJECT_STATUS.md`
-2. `docs/GAME_DESIGN.md`
-3. `docs/DECISIONS.md`
-4. 필요하면 종합 기획서 DOCX
+2. `docs/ROADMAP.md`
+3. `docs/GAME_DESIGN.md`
+4. `docs/DECISIONS.md`
+5. 필요하면 종합 기획서 DOCX
 
 작업 트리의 기존 변경을 확인하고, 다른 작업자의 변경을 임의로 되돌리지 않는다.
 
@@ -51,7 +52,8 @@
 ## 문서 갱신 규칙
 
 - 확정사항을 바꾸면 `docs/DECISIONS.md`에 날짜, 변경 내용, 이유, 영향 범위를 기록한다.
-- 작업을 마치면 `docs/PROJECT_STATUS.md`의 완료 항목과 다음 작업을 갱신한다.
+- 작업을 시작할 때 `docs/ROADMAP.md`에서 수행할 작업 ID와 선행 조건을 확인한다.
+- 작업을 마치면 `docs/ROADMAP.md`의 체크박스와 `docs/PROJECT_STATUS.md`의 완료 항목과 다음 작업을 갱신한다.
 - 기획과 구현이 다르면 조용히 구현을 바꾸지 말고 차이를 문서화한다.
 - 제안 단계의 이름과 수치는 확정으로 둔갑시키지 않는다.
 
