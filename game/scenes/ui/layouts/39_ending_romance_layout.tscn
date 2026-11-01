@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/screen_layout_base.tscn" id="1_base"]
+
+[node name="EndingRomanceLayout" instance=ExtResource("1_base")]
+screen_id = 39
+screen_title = "로맨스 엔딩"
+preview_texture_path = "res://assets/ui/screen_previews/39_ending_romance_bright_v2.png"

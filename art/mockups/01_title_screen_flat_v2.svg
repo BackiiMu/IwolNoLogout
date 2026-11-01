@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 320 180" shape-rendering="crispEdges">
+  <rect width="320" height="180" fill="#07111F"/>
+  <rect x="0" y="0" width="320" height="4" fill="#02060C"/>
+  <rect x="0" y="160" width="320" height="20" fill="#0D1B2C"/>
+
+  <g fill="#13253A">
+    <rect x="132" y="18" width="96" height="66"/>
+    <rect x="140" y="90" width="84" height="48"/>
+    <rect x="228" y="18" width="80" height="122"/>
+  </g>
+  <g fill="#1C3550">
+    <rect x="136" y="22" width="88" height="4"/>
+    <rect x="146" y="96" width="72" height="6"/>
+    <rect x="232" y="22" width="72" height="4"/>
+  </g>
+
+  <rect x="148" y="58" width="70" height="6" fill="#02060C"/>
+  <rect x="154" y="36" width="44" height="24" fill="#02060C"/>
+  <rect x="156" y="38" width="40" height="20" fill="#13253A"/>
+  <rect x="168" y="44" width="16" height="8" fill="#47D7E8"/>
+  <rect x="171" y="46" width="10" height="4" fill="#F4E9D5"/>
+  <rect x="174" y="58" width="4" height="10" fill="#02060C"/>
+  <rect x="160" y="68" width="32" height="3" fill="#02060C"/>
+
+  <g>
+    <rect x="246" y="28" width="54" height="108" fill="#02060C"/>
+    <rect x="248" y="30" width="50" height="104" fill="#13253A"/>
+    <rect x="252" y="34" width="42" height="96" fill="#07111F"/>
+    <rect x="248" y="40" width="4" height="18" fill="#47D7E8"/>
+    <rect x="294" y="48" width="4" height="24" fill="#47D7E8"/>
+    <rect x="248" y="92" width="4" height="26" fill="#FF657A"/>
+    <rect x="294" y="86" width="4" height="20" fill="#FF657A"/>
+    <rect x="258" y="42" width="4" height="4" fill="#47D7E8"/>
+    <rect x="286" y="56" width="6" height="4" fill="#FF657A"/>
+    <rect x="260" y="112" width="6" height="4" fill="#FF657A"/>
+    <rect x="278" y="72" width="4" height="4" fill="#47D7E8"/>
+    <rect x="270" y="80" width="10" height="10" fill="#02060C"/>
+    <rect x="272" y="82" width="2" height="2" fill="#FF657A"/>
+    <rect x="278" y="82" width="2" height="2" fill="#FF657A"/>
+  </g>
+
+  <g>
+    <rect x="218" y="108" width="18" height="14" fill="#F4E9D5"/>
+    <rect x="216" y="112" width="22" height="8" fill="#F4E9D5"/>
+    <rect x="220" y="106" width="14" height="18" fill="#F4E9D5"/>
+    <rect x="222" y="110" width="10" height="8" fill="#13253A"/>
+    <rect x="224" y="112" width="2" height="3" fill="#47D7E8"/>
+    <rect x="229" y="112" width="2" height="3" fill="#47D7E8"/>
+    <rect x="216" y="114" width="2" height="4" fill="#47D7E8"/>
+    <rect x="236" y="114" width="2" height="4" fill="#FF657A"/>
+    <rect x="222" y="124" width="3" height="3" fill="#02060C"/>
+    <rect x="230" y="124" width="3" height="3" fill="#02060C"/>
+  </g>
+
+  <svg x="178" y="96" width="32" height="48" viewBox="0 0 32 48" overflow="hidden">
+    <image href="../../game/assets/characters/iwol_walk_32x48_v1.png" x="0" y="0" width="96" height="192" image-rendering="pixelated"/>
+  </svg>
+
+  <g font-family="NanumGothic, Apple SD Gothic Neo, sans-serif">
+    <text x="14" y="31" fill="#F4E9D5" font-size="22" font-weight="800">이월짱</text>
+    <rect x="14" y="36" width="102" height="2" fill="#47D7E8"/>
+    <text x="14" y="51" fill="#F4E9D5" font-size="10" font-weight="700">로그아웃할 수 없습니다!</text>
+
+    <rect x="14" y="66" width="104" height="78" fill="#02060C"/>
+    <rect x="15" y="67" width="102" height="76" fill="#13253A"/>
+
+    <rect x="20" y="73" width="92" height="16" fill="#1C3550" stroke="#47D7E8" stroke-width="1"/>
+    <path d="M16 78 L20 81 L16 84 Z" fill="#47D7E8"/>
+    <text x="28" y="84" fill="#F4E9D5" font-size="8" font-weight="700">새 게임</text>
+
+    <rect x="20" y="93" width="92" height="12" fill="#13253A"/>
+    <text x="28" y="102" fill="#91A2B5" font-size="8" font-weight="600">이어하기</text>
+
+    <rect x="20" y="109" width="92" height="12" fill="#13253A"/>
+    <text x="28" y="118" fill="#F4E9D5" font-size="8" font-weight="600">설정</text>
+
+    <rect x="20" y="125" width="92" height="12" fill="#13253A"/>
+    <text x="28" y="134" fill="#F4E9D5" font-size="8" font-weight="600">종료</text>
+
+    <text x="14" y="169" fill="#91A2B5" font-size="6" font-weight="600">비공식 팬메이드 게임</text>
+    <text x="248" y="169" fill="#91A2B5" font-size="6" font-weight="600">v0.1</text>
+  </g>
+</svg>

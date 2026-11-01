@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/screen_layout_base.tscn" id="1_base"]
+
+[node name="FirstImpressionLayout" instance=ExtResource("1_base")]
+screen_id = 21
+screen_title = "첫인상 판정"
+preview_texture_path = "res://assets/ui/screen_previews/21_first_impression_bright_v2.png"

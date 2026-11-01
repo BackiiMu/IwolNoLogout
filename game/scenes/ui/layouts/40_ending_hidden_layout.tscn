@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/screen_layout_base.tscn" id="1_base"]
+
+[node name="EndingHiddenLayout" instance=ExtResource("1_base")]
+screen_id = 40
+screen_title = "히든 엔딩"
+preview_texture_path = "res://assets/ui/screen_previews/40_ending_hidden_bright_v2.png"

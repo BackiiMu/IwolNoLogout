@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/screen_layout_base.tscn" id="1_base"]
+
+[node name="PrologueHeroLayout" instance=ExtResource("1_base")]
+screen_id = 19
+screen_title = "프롤로그 대표"
+preview_texture_path = "res://assets/ui/screen_previews/19_prologue_hero_bright_v2.png"

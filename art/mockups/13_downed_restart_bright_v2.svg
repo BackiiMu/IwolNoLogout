@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 320 180" shape-rendering="crispEdges">
+  <style>text{font-family:NanumGothic,Apple SD Gothic Neo,sans-serif}</style>
+  <rect x="0" y="0" width="320" height="180" fill="#F7FCFF"/>
+  <rect x="0" y="0" width="320" height="180" fill="#14324A"/><text x="160" y="54" fill="#FF5573" font-size="14" font-weight="800" text-anchor="middle">연결이 끊어졌습니다</text><text x="160" y="74" fill="#C7E7F1" font-size="7" font-weight="600" text-anchor="middle">마지막 체크포인트에서 다시 시작할 수 있습니다.</text><rect x="96" y="92" width="128" height="18" fill="#DDF6FF" stroke="#00B8D9" stroke-width="1"/><text x="104" y="105" fill="#10283B" font-size="8" font-weight="700" text-anchor="start">체크포인트 재개</text><rect x="96" y="116" width="128" height="18" fill="#FFFFFF" stroke="#14324A" stroke-width="1"/><text x="104" y="129" fill="#557286" font-size="8" font-weight="700" text-anchor="start">타이틀로</text><text x="160" y="154" fill="#C7E7F1" font-size="6" font-weight="600" text-anchor="middle">저장 데이터는 손상되지 않았습니다.</text>
+</svg>

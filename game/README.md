@@ -8,7 +8,8 @@
 
 1. Open `project.godot` in Godot.
 2. Press `F6` or `F5` to run the project.
-3. The boot scene automatically opens the foundation test room.
+3. The boot scene opens the title screen.
+4. Select `새 게임` to enter the current foundation test room.
 
 To launch the game at a specific window position, use Godot's `--position` option. The display manager preserves a command-line position instead of centering the window.
 
@@ -25,6 +26,21 @@ To launch the game at a specific window position, use Godot's `--position` optio
 | Pause | Escape | Start |
 | Toggle fullscreen | F11 | — |
 | Toggle debug overlay | F3 | — |
+| Navigate menus | Arrow keys | D-pad / left stick |
+| Confirm menu | Enter or Space | A / Cross |
+| Cancel dialog | Escape | B / Circle |
+
+## UI Review Gallery
+
+Debug builds show an `UI 검수` button on the title screen. The gallery displays all 43 approved layout prototypes in order.
+
+| Action | Keyboard | Gamepad |
+|---|---|---|
+| Previous screen | Left arrow | D-pad left |
+| Next screen | Right arrow or Enter | D-pad right or A / Cross |
+| Return to title | Escape | B / Circle |
+
+Screens `02` through `43` are layout prototypes. They do not count as completed gameplay systems until their Control nodes, input, and data logic are connected.
 
 ## Validate
 

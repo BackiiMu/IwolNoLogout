@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/screen_layout_base.tscn" id="1_base"]
+
+[node name="EndingGetOutLayout" instance=ExtResource("1_base")]
+screen_id = 41
+screen_title = "빨리 꺼져! 엔딩"
+preview_texture_path = "res://assets/ui/screen_previews/41_ending_get_out_bright_v2.png"

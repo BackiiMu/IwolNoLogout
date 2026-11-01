@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/screen_layout_base.tscn" id="1_base"]
+
+[node name="StreamEndLayout" instance=ExtResource("1_base")]
+screen_id = 15
+screen_title = "방송 종료 직전"
+preview_texture_path = "res://assets/ui/screen_previews/15_stream_end_bright_v2.png"

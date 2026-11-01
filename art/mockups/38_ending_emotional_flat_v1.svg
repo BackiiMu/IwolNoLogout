@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 320 180" shape-rendering="crispEdges">
+  <style>text{font-family:NanumGothic,Apple SD Gothic Neo,sans-serif}</style>
+  <rect x="0" y="0" width="320" height="180" fill="#07111F"/>
+  <rect x="0" y="0" width="320" height="180" fill="#07111F"/><rect x="12" y="12" width="296" height="156" fill="#0D1B2C"/><rect x="32" y="42" width="256" height="2" fill="#F1B45B"/><text x="160" y="72" fill="#F4E9D5" font-size="16" font-weight="800" text-anchor="middle">감동 엔딩</text><text x="160" y="92" fill="#91A2B5" font-size="7" font-weight="600" text-anchor="middle">끝낼 수 있었기에 함께한 시간이 남았다.</text><rect x="140" y="106" width="40" height="32" fill="#13253A" stroke="#F1B45B" stroke-width="1"/><text x="160" y="128" fill="#F1B45B" font-size="12" font-weight="800" text-anchor="middle">◇</text><text x="160" y="154" fill="#91A2B5" font-size="6" font-weight="600" text-anchor="middle">아무 버튼이나 눌러 계속</text>
+</svg>

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/screen_layout_base.tscn" id="1_base"]
+
+[node name="CompanionConfirmLayout" instance=ExtResource("1_base")]
+screen_id = 23
+screen_title = "동행자 확정"
+preview_texture_path = "res://assets/ui/screen_previews/23_companion_confirm_bright_v2.png"

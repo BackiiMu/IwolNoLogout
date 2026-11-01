@@ -1,0 +1,181 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/title_screen.gd" id="1_title"]
+[ext_resource type="Theme" path="res://ui/themes/bright_theme.tres" id="2_theme"]
+[ext_resource type="Texture2D" path="res://assets/characters/iwol_walk_32x48_v1.png" id="3_player"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 180.0
+mouse_filter = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_title")
+
+[node name="GameTitle" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 138.0
+offset_bottom = 35.0
+theme_override_font_sizes/font_size = 20
+text = "이월짱"
+
+[node name="TitleLine" type="ColorRect" parent="."]
+offset_left = 12.0
+offset_top = 36.0
+offset_right = 138.0
+offset_bottom = 38.0
+color = Color(0, 0.721569, 0.85098, 1)
+mouse_filter = 2
+
+[node name="Subtitle" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 41.0
+offset_right = 140.0
+offset_bottom = 57.0
+theme_override_font_sizes/font_size = 10
+text = "로그아웃할 수 없습니다!"
+
+[node name="MenuPanel" type="Panel" parent="."]
+offset_left = 12.0
+offset_top = 68.0
+offset_right = 118.0
+offset_bottom = 153.0
+
+[node name="Menu" type="VBoxContainer" parent="MenuPanel"]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 99.0
+offset_bottom = 78.0
+
+[node name="NewGameButton" type="Button" parent="MenuPanel/Menu"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../QuitButton")
+text = "새 게임"
+alignment = 0
+
+[node name="ContinueButton" type="Button" parent="MenuPanel/Menu"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+focus_mode = 0
+disabled = true
+tooltip_text = "저장 기능 구현 후 활성화됩니다."
+text = "이어하기"
+alignment = 0
+
+[node name="SettingsButton" type="Button" parent="MenuPanel/Menu"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+focus_mode = 0
+disabled = true
+tooltip_text = "설정 화면 구현 후 활성화됩니다."
+text = "설정"
+alignment = 0
+
+[node name="QuitButton" type="Button" parent="MenuPanel/Menu"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+focus_neighbor_top = NodePath("../NewGameButton")
+focus_neighbor_bottom = NodePath("../../../GalleryButton")
+theme_override_colors/font_color = Color(1, 0.333333, 0.45098, 1)
+theme_override_colors/font_hover_color = Color(1, 0.333333, 0.45098, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.333333, 0.45098, 1)
+text = "종료"
+alignment = 0
+
+[node name="PlayerPreview" type="Sprite2D" parent="."]
+position = Vector2(207, 101)
+texture = ExtResource("3_player")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 48)
+
+[node name="Status" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 156.0
+offset_right = 180.0
+offset_bottom = 165.0
+theme_override_colors/font_color = Color(0.333333, 0.447059, 0.52549, 1)
+theme_override_font_sizes/font_size = 6
+text = "이어하기·설정은 다음 단계에서 연결됩니다."
+
+[node name="FanmadeNotice" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 168.0
+offset_right = 150.0
+offset_bottom = 178.0
+theme_override_colors/font_color = Color(0.333333, 0.447059, 0.52549, 1)
+theme_override_font_sizes/font_size = 6
+text = "비공식 팬메이드 게임"
+
+[node name="Version" type="Label" parent="."]
+offset_left = 270.0
+offset_top = 168.0
+offset_right = 308.0
+offset_bottom = 178.0
+theme_override_colors/font_color = Color(0.333333, 0.447059, 0.52549, 1)
+theme_override_font_sizes/font_size = 6
+text = "prototype"
+horizontal_alignment = 2
+
+[node name="GalleryButton" type="Button" parent="."]
+visible = false
+offset_left = 250.0
+offset_top = 148.0
+offset_right = 308.0
+offset_bottom = 164.0
+focus_neighbor_top = NodePath("../MenuPanel/Menu/QuitButton")
+theme_override_font_sizes/font_size = 6
+text = "UI 검수"
+
+[node name="ExitOverlay" type="ColorRect" parent="."]
+visible = false
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0.0784314, 0.196078, 0.290196, 0.82)
+
+[node name="ConfirmPanel" type="Panel" parent="ExitOverlay"]
+offset_left = 84.0
+offset_top = 49.0
+offset_right = 236.0
+offset_bottom = 131.0
+
+[node name="Title" type="Label" parent="ExitOverlay/ConfirmPanel"]
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 140.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 11
+text = "게임을 종료할까요?"
+horizontal_alignment = 1
+
+[node name="Description" type="Label" parent="ExitOverlay/ConfirmPanel"]
+offset_left = 12.0
+offset_top = 31.0
+offset_right = 140.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0.333333, 0.447059, 0.52549, 1)
+theme_override_font_sizes/font_size = 7
+text = "저장되지 않은 진행은 사라집니다."
+horizontal_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="ExitOverlay/ConfirmPanel"]
+offset_left = 12.0
+offset_top = 51.0
+offset_right = 140.0
+offset_bottom = 70.0
+alignment = 1
+
+[node name="ConfirmExitButton" type="Button" parent="ExitOverlay/ConfirmPanel/Buttons"]
+custom_minimum_size = Vector2(58, 18)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.333333, 0.45098, 1)
+theme_override_colors/font_hover_color = Color(1, 0.333333, 0.45098, 1)
+text = "종료하기"
+
+[node name="CancelExitButton" type="Button" parent="ExitOverlay/ConfirmPanel/Buttons"]
+custom_minimum_size = Vector2(58, 18)
+layout_mode = 2
+text = "취소"

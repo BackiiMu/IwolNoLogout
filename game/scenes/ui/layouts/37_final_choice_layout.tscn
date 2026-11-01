@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/screen_layout_base.tscn" id="1_base"]
+
+[node name="FinalChoiceLayout" instance=ExtResource("1_base")]
+screen_id = 37
+screen_title = "튜토 최종 선택"
+preview_texture_path = "res://assets/ui/screen_previews/37_final_choice_bright_v2.png"

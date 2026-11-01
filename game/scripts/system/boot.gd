@@ -1,14 +1,13 @@
 extends Node
 
-const TEST_ROOM_PATH := "res://scenes/system/test_room.tscn"
+const TITLE_SCREEN_PATH := "res://scenes/ui/title_screen.tscn"
 
 
 func _ready() -> void:
-	call_deferred("_open_test_room")
+	call_deferred("_open_title_screen")
 
 
-func _open_test_room() -> void:
-	var error := get_tree().change_scene_to_file(TEST_ROOM_PATH)
+func _open_title_screen() -> void:
+	var error := get_tree().change_scene_to_file(TITLE_SCREEN_PATH)
 	if error != OK:
-		push_error("Failed to open test room: %s" % error_string(error))
-
+		push_error("Failed to open title screen: %s" % error_string(error))
