@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "title": "라운드 1 · 안정과 예능",
+  "rule": "제한 정보 판정 → 두 명 동시 공개 → 한 명 확정 또는 둘 다 영구 포기",
+  "candidates": [
+    {
+      "slot": "A",
+      "id": "seoyun",
+      "name": "서윤",
+      "role": "안정형 방송 매니저",
+      "limited_tendency": "예상 가능한 계획을 선호한다.",
+      "limited_constraint": "돌발 상황에서는 판단이 느려질 수 있다.",
+      "strength": "일정과 위험 요소를 정리하고 안전한 경로를 만든다.",
+      "constraint": "완벽한 계획을 세우려다 공격 기회를 놓칠 수 있다.",
+      "first_line": "선택하기 전에, 돌아갈 방법부터 확인하죠.",
+      "relationship_hook": "선택을 기록하고 현실에서 지킬 수 있는 약속을 제안한다."
+    },
+    {
+      "slot": "B",
+      "id": "doyun",
+      "name": "도윤",
+      "role": "즉흥형 현장 진행자",
+      "limited_tendency": "뜻밖의 상황을 기회로 바꾼다.",
+      "limited_constraint": "위험 판단이 한 박자 늦을 수 있다.",
+      "strength": "실패를 방송 장면과 새로운 돌파구로 전환한다.",
+      "constraint": "분위기를 살리려다 계획에 없던 위험을 만들 수 있다.",
+      "first_line": "길이 없으면 방송하면서 하나 만들면 되지.",
+      "relationship_hook": "가벼워 보여도 책임을 맡으면 마지막까지 자리를 지킨다."
+    }
+  ]
+}

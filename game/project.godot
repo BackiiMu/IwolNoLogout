@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.7")
 [autoload]
 
 DisplayManager="*res://scripts/system/display_manager.gd"
+GameState="*res://scripts/system/game_state.gd"
 
 [display]
 

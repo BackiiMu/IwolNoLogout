@@ -1,0 +1,89 @@
+{
+  "title": "프롤로그 · 접속 종료 실패",
+  "beats": [
+    {
+      "id": "stream_closing",
+      "visual": "broadcast",
+      "speaker": "이월짱",
+      "text": "오늘 방송은 여기까지. 다들 늦었으니까 얼른 자요.",
+      "chat": ["벌써 끝?", "오늘도 재밌었다", "종료 버튼 가자"]
+    },
+    {
+      "id": "logout_press",
+      "visual": "broadcast",
+      "speaker": "이월짱",
+      "text": "자, 그럼 종료 누릅니다. 하나, 둘—",
+      "chat": ["ㅂㅂ", "내일 봐요", "수고했어"]
+    },
+    {
+      "id": "logout_pending",
+      "visual": "pending",
+      "speaker": "SYSTEM",
+      "text": "방송 종료 요청을 처리하고 있습니다…",
+      "chat": ["왜 안 꺼짐?", "멈춘 거 아냐?"]
+    },
+    {
+      "id": "logout_denied",
+      "visual": "error",
+      "speaker": "SYSTEM",
+      "text": "오류: 세션 종료 권한을 확인할 수 없습니다.",
+      "chat": ["에러 떴다", "방송 아직 켜져 있음", "이월짱 목소리 들려?"]
+    },
+    {
+      "id": "iwol_confused",
+      "visual": "error",
+      "speaker": "이월짱",
+      "text": "잠깐만. 종료 버튼이 왜 회색이지? 마우스도 안 움직이는데.",
+      "chat": ["강제 종료 해봐", "컴퓨터 재부팅?", "화면 이상해"]
+    },
+    {
+      "id": "space_shift",
+      "visual": "glitch",
+      "speaker": "SYSTEM",
+      "text": "방송 공간 동기화가 해제되었습니다. 안전 안내 프로세스를 호출합니다.",
+      "chat": ["배경 어디 감", "이거 연출이지?", "대답해줘"]
+    },
+    {
+      "id": "tuto_arrives",
+      "visual": "tuto",
+      "speaker": "튜토",
+      "text": "안녕하세요, 이월짱. 저는 안전 안내 AI 튜토입니다. 당황하지 마세요.",
+      "chat": ["새 캐릭터?", "AI가 왜 이름을 알아", "귀엽긴 한데 수상함"]
+    },
+    {
+      "id": "iwol_questions",
+      "visual": "tuto",
+      "speaker": "이월짱",
+      "text": "안 당황하게 생겼냐고. 방송부터 끄고 설명해.",
+      "chat": ["맞는 말", "종료 먼저", "튜토야 꺼줘"]
+    },
+    {
+      "id": "tuto_rule",
+      "visual": "tuto_warning",
+      "speaker": "튜토",
+      "text": "현재 단독 로그아웃은 안전하지 않습니다. 인증된 동행자 한 명이 필요합니다.",
+      "chat": ["갑자기 동행자?", "누구 데려가는데", "선택 잘해야겠다"]
+    },
+    {
+      "id": "tuto_clue",
+      "visual": "tuto_warning",
+      "speaker": "튜토",
+      "text": "안심하세요. 방송이 계속되는 동안에는 누구도 사라지지 않습니다.",
+      "chat": ["말이 좀 이상한데", "계속되는 동안?", "종료를 싫어하나"]
+    },
+    {
+      "id": "selection_gate",
+      "visual": "gate",
+      "speaker": "SYSTEM",
+      "text": "동행자 인증 라운드 1을 시작합니다. 선택과 포기는 되돌릴 수 없습니다.",
+      "chat": ["뒤로 못 간대", "정보 잘 보자", "채팅 말만 믿지 마"]
+    },
+    {
+      "id": "tuto_limited_info",
+      "visual": "gate",
+      "speaker": "튜토",
+      "text": "먼저 제한된 정보만 보고 첫인상을 남겨 주세요. 이후 두 사람을 동시에 공개합니다.",
+      "chat": ["A냐 B냐", "보류도 필요함", "공개 전에는 확정 아님"]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 extends Control
 
-const TEST_ROOM_PATH := "res://scenes/system/test_room.tscn"
+const PROLOGUE_PATH := "res://scenes/story/prologue_flow.tscn"
 const GALLERY_PATH := "res://scenes/ui/screen_gallery.tscn"
 
 const COLOR_BACKGROUND := Color("f7fcff")
@@ -11,21 +11,33 @@ const COLOR_CYAN := Color("00b8d9")
 const COLOR_CORAL := Color("ff5573")
 
 @onready var new_game_button: Button = $MenuPanel/Menu/NewGameButton
+@onready var continue_button: Button = $MenuPanel/Menu/ContinueButton
 @onready var quit_button: Button = $MenuPanel/Menu/QuitButton
 @onready var gallery_button: Button = $GalleryButton
+@onready var status_label: Label = $Status
+@onready var new_game_overlay: ColorRect = $NewGameOverlay
+@onready var confirm_new_game_button: Button = $NewGameOverlay/ConfirmPanel/Buttons/ConfirmNewGameButton
+@onready var cancel_new_game_button: Button = $NewGameOverlay/ConfirmPanel/Buttons/CancelNewGameButton
 @onready var exit_overlay: ColorRect = $ExitOverlay
 @onready var confirm_exit_button: Button = $ExitOverlay/ConfirmPanel/Buttons/ConfirmExitButton
 @onready var cancel_exit_button: Button = $ExitOverlay/ConfirmPanel/Buttons/CancelExitButton
 
 
 func _ready() -> void:
-	new_game_button.pressed.connect(_start_new_game)
+	new_game_button.pressed.connect(_request_new_game)
+	continue_button.pressed.connect(_continue_game)
 	quit_button.pressed.connect(_request_exit)
 	gallery_button.pressed.connect(_open_gallery)
+	confirm_new_game_button.pressed.connect(_start_new_game)
+	cancel_new_game_button.pressed.connect(_cancel_new_game)
 	confirm_exit_button.pressed.connect(_confirm_exit)
 	cancel_exit_button.pressed.connect(_cancel_exit)
+	new_game_overlay.visible = false
 	exit_overlay.visible = false
 	gallery_button.visible = OS.is_debug_build()
+	continue_button.disabled = not GameState.has_save()
+	continue_button.focus_mode = Control.FOCUS_NONE if continue_button.disabled else Control.FOCUS_ALL
+	status_label.text = "저장된 진행을 이어갈 수 있습니다." if GameState.has_save() else "새 게임에서 프롤로그가 시작됩니다."
 	new_game_button.grab_focus()
 	queue_redraw()
 
@@ -63,15 +75,48 @@ func _draw_tuto(origin: Vector2) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	if new_game_overlay.visible and event.is_action_pressed("ui_cancel"):
+		_cancel_new_game()
+		get_viewport().set_input_as_handled()
+		return
 	if exit_overlay.visible and event.is_action_pressed("ui_cancel"):
 		_cancel_exit()
 		get_viewport().set_input_as_handled()
 
 
+func _request_new_game() -> void:
+	if not GameState.has_save():
+		_start_new_game()
+		return
+	new_game_overlay.visible = true
+	_set_main_menu_focus_enabled(false)
+	cancel_new_game_button.grab_focus()
+
+
 func _start_new_game() -> void:
-	var error := get_tree().change_scene_to_file(TEST_ROOM_PATH)
+	if not GameState.start_new_game():
+		status_label.text = "새 게임 저장을 만들지 못했습니다."
+		_cancel_new_game()
+		return
+	var error := get_tree().change_scene_to_file(PROLOGUE_PATH)
 	if error != OK:
-		push_error("Failed to open test room: %s" % error_string(error))
+		push_error("Failed to open prologue: %s" % error_string(error))
+
+
+func _continue_game() -> void:
+	if not GameState.load_game():
+		continue_button.disabled = true
+		status_label.text = "저장 파일을 불러오지 못했습니다."
+		return
+	var error := get_tree().change_scene_to_file(PROLOGUE_PATH)
+	if error != OK:
+		push_error("Failed to continue prologue: %s" % error_string(error))
+
+
+func _cancel_new_game() -> void:
+	new_game_overlay.visible = false
+	_set_main_menu_focus_enabled(true)
+	new_game_button.grab_focus()
 
 
 func _request_exit() -> void:
@@ -99,5 +144,6 @@ func _confirm_exit() -> void:
 func _set_main_menu_focus_enabled(enabled: bool) -> void:
 	var focus_mode := Control.FOCUS_ALL if enabled else Control.FOCUS_NONE
 	new_game_button.focus_mode = focus_mode
+	continue_button.focus_mode = Control.FOCUS_NONE if continue_button.disabled else focus_mode
 	quit_button.focus_mode = focus_mode
 	gallery_button.focus_mode = focus_mode

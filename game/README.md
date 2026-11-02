@@ -9,7 +9,8 @@
 1. Open `project.godot` in Godot.
 2. Press `F6` or `F5` to run the project.
 3. The boot scene opens the title screen.
-4. Select `새 게임` to enter the current foundation test room.
+4. Select `새 게임` to begin the logout-failure prologue and first candidate round.
+5. Progress is saved automatically. `이어하기` resumes the last story or selection step.
 
 To launch the game at a specific window position, use Godot's `--position` option. The display manager preserves a command-line position instead of centering the window.
 
@@ -41,6 +42,17 @@ Debug builds show an `UI 검수` button on the title screen. The gallery display
 | Return to title | Escape | B / Circle |
 
 Screens `02` through `43` are layout prototypes. They do not count as completed gameplay systems until their Control nodes, input, and data logic are connected.
+
+## Current Playable Flow
+
+- Broadcast closing and logout failure
+- Tuto AI introduction and first suspicious clue
+- Round 1 limited-information impression
+- Simultaneous reveal of Seoyun and Doyun
+- Permanent companion confirmation or permanent abandonment of both
+- Automatic save and continue from the latest phase
+
+The foundation test room remains available as `scenes/system/test_room.tscn`, but it is no longer the default new-game destination.
 
 ## Validate
 

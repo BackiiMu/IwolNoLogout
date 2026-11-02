@@ -27,7 +27,10 @@ func _initialize() -> void:
 	_check_scene("res://scenes/ui/screen_layout_base.tscn")
 	_check_scene("res://scenes/system/test_room.tscn")
 	_check_scene("res://scenes/player/player.tscn")
+	_check_scene("res://scenes/story/prologue_flow.tscn")
 	_check(ResourceLoader.exists("res://ui/themes/bright_theme.tres"), "Missing bright UI theme")
+	_check_json_dictionary("res://data/story/prologue.json", "prologue data")
+	_check_json_dictionary("res://data/candidates/round_01.json", "round 1 candidate data")
 	_check_screen_catalog()
 
 	if failures.is_empty():
@@ -59,6 +62,14 @@ func _check_scene(path: String) -> void:
 	_check(instance != null, "Failed to instantiate scene: %s" % path)
 	if instance != null:
 		instance.free()
+
+
+func _check_json_dictionary(path: String, label: String) -> void:
+	_check(FileAccess.file_exists(path), "Missing %s" % label)
+	if not FileAccess.file_exists(path):
+		return
+	var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(path))
+	_check(parsed is Dictionary, "%s must be a dictionary" % label)
 
 
 func _check_screen_catalog() -> void:

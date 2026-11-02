@@ -5,7 +5,7 @@
 ## 현재 상태
 
 - 단계: 프리프로덕션
-- 기술 단계: P2 이동 샌드박스 구현 완료, G2 수동 검수 대기
+- 기술 단계: P2 이동 샌드박스 완료, 프롤로그·후보 1라운드 구현 완료, G2·G4 수동 검수 대기
 - 게임 형식: 저해상도 2D 픽셀아트 탑다운 액션 어드벤처 + 비주얼노벨식 대화
 - 주인공: 남성 스트리머 이월짱
 - 개발 프로젝트명: `IwolNoLogout`
@@ -18,11 +18,13 @@
 ## 문서 읽는 순서
 
 1. `AGENTS.md` — 작업 규칙과 반드시 지킬 확정사항
-2. `docs/PROJECT_STATUS.md` — 현재 진행 상황과 다음 작업
-3. `docs/ROADMAP.md` — 전체 개발 순서, 체크리스트, 단계별 완료 기준
-4. `docs/GAME_DESIGN.md` — 게임 기획의 작업용 Markdown 요약
-5. `docs/DECISIONS.md` — 결정 이력과 변경 이유
-6. `docs/이월짱_로그아웃할_수_없습니다_종합_게임_기획서.docx` — 편집 가능한 종합 기획서
+2. `docs/HANDOFF.md` — 최근 작업 이력, 미검수 항목, 바로 이어갈 작업
+3. `docs/PROJECT_STATUS.md` — 현재 진행 상황과 다음 작업
+4. `docs/ROADMAP.md` — 전체 개발 순서, 체크리스트, 단계별 완료 기준
+5. `docs/PROLOGUE_SELECTION_SPEC.md` — 프롤로그와 첫 후보 선택 상세 기획
+6. `docs/GAME_DESIGN.md` — 게임 기획의 작업용 Markdown 요약
+7. `docs/DECISIONS.md` — 결정 이력과 변경 이유
+8. `docs/이월짱_로그아웃할_수_없습니다_종합_게임_기획서.docx` — 편집 가능한 종합 기획서
 
 ## 저장소 구조
 
@@ -36,6 +38,8 @@
 ├── docs/
 │   ├── DECISIONS.md
 │   ├── GAME_DESIGN.md
+│   ├── HANDOFF.md
+│   ├── PROLOGUE_SELECTION_SPEC.md
 │   ├── PROJECT_STATUS.md
 │   ├── ROADMAP.md
 │   └── 이월짱_로그아웃할_수_없습니다_종합_게임_기획서.docx
@@ -53,7 +57,7 @@ git pull
 git status
 ```
 
-그다음 `AGENTS.md`와 `docs/PROJECT_STATUS.md`를 읽는다. `docs/PROJECT_STATUS.md`가 가리키는 현재 단계에서 `docs/ROADMAP.md`의 첫 미완료 항목부터 진행한다. 확정사항을 바꾸면 반드시 `docs/DECISIONS.md`에 이유와 영향을 기록하고, 작업 종료 전 현황과 체크리스트를 갱신한다.
+그다음 `AGENTS.md`, `docs/HANDOFF.md`, `docs/PROJECT_STATUS.md`를 읽는다. `docs/HANDOFF.md`의 미검수 항목을 먼저 확인하고 `docs/PROJECT_STATUS.md`가 가리키는 현재 단계에서 작업을 진행한다. 확정사항을 바꾸면 반드시 `docs/DECISIONS.md`에 이유와 영향을 기록하고, 작업 종료 전 인수인계·현황·체크리스트를 함께 갱신한다.
 
 ## 권리 원칙
 

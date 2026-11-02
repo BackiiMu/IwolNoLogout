@@ -1,0 +1,311 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/story/prologue_flow.gd" id="1_script"]
+[ext_resource type="Theme" path="res://ui/themes/bright_theme.tres" id="2_theme"]
+
+[node name="PrologueFlow" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 180.0
+mouse_filter = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_script")
+
+[node name="TopBar" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 312.0
+offset_bottom = 25.0
+
+[node name="SceneTitle" type="Label" parent="TopBar"]
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 230.0
+offset_bottom = 17.0
+theme_override_font_sizes/font_size = 8
+text = "프롤로그"
+
+[node name="Progress" type="Label" parent="TopBar"]
+offset_left = 230.0
+offset_top = 3.0
+offset_right = 296.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0, 0.721569, 0.85098, 1)
+theme_override_font_sizes/font_size = 7
+text = "01 / 12"
+horizontal_alignment = 2
+
+[node name="StoryStage" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 29.0
+offset_right = 220.0
+offset_bottom = 123.0
+
+[node name="VisualTitle" type="Label" parent="StoryStage"]
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 203.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(0, 0.721569, 0.85098, 1)
+theme_override_font_sizes/font_size = 7
+text = "LIVE · 방송 종료 직전"
+
+[node name="VisualBody" type="Label" parent="StoryStage"]
+offset_left = 9.0
+offset_top = 70.0
+offset_right = 203.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0.333333, 0.447059, 0.52549, 1)
+theme_override_font_sizes/font_size = 6
+text = "시청자와 마지막 인사를 나누는 중"
+horizontal_alignment = 1
+
+[node name="ChatPanel" type="Panel" parent="."]
+offset_left = 224.0
+offset_top = 29.0
+offset_right = 312.0
+offset_bottom = 123.0
+
+[node name="ChatTitle" type="Label" parent="ChatPanel"]
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 82.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(1, 0.333333, 0.45098, 1)
+theme_override_font_sizes/font_size = 6
+text = "가상 채팅"
+
+[node name="ChatText" type="Label" parent="ChatPanel"]
+offset_left = 6.0
+offset_top = 20.0
+offset_right = 82.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0.333333, 0.447059, 0.52549, 1)
+theme_override_font_sizes/font_size = 5
+text = "• 오늘도 재밌었다"
+autowrap_mode = 2
+
+[node name="DialoguePanel" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 127.0
+offset_right = 312.0
+offset_bottom = 176.0
+
+[node name="Speaker" type="Label" parent="DialoguePanel"]
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 66.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0, 0.721569, 0.85098, 1)
+theme_override_font_sizes/font_size = 7
+text = "이월짱"
+
+[node name="DialogueText" type="Label" parent="DialoguePanel"]
+offset_left = 8.0
+offset_top = 19.0
+offset_right = 238.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 7
+text = "오늘 방송은 여기까지."
+autowrap_mode = 2
+
+[node name="AdvanceButton" type="Button" parent="DialoguePanel"]
+offset_left = 246.0
+offset_top = 21.0
+offset_right = 296.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 7
+text = "다음"
+
+[node name="SelectionLayer" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PhaseTitle" type="Label" parent="SelectionLayer"]
+offset_left = 10.0
+offset_top = 31.0
+offset_right = 310.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 9
+text = "라운드 1 · 제한 정보"
+horizontal_alignment = 1
+
+[node name="Instruction" type="Label" parent="SelectionLayer"]
+offset_left = 18.0
+offset_top = 47.0
+offset_right = 302.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0.333333, 0.447059, 0.52549, 1)
+theme_override_font_sizes/font_size = 6
+text = "제한 정보만 보고 첫인상을 남겨 주세요."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CandidateAButton" type="Button" parent="SelectionLayer"]
+offset_left = 10.0
+offset_top = 69.0
+offset_right = 157.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 6
+text = "후보 A"
+alignment = 0
+
+[node name="CandidateBButton" type="Button" parent="SelectionLayer"]
+offset_left = 163.0
+offset_top = 69.0
+offset_right = 310.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 6
+text = "후보 B"
+alignment = 0
+
+[node name="ImpressionButtons" type="HBoxContainer" parent="SelectionLayer"]
+offset_left = 37.0
+offset_top = 151.0
+offset_right = 283.0
+offset_bottom = 174.0
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="ImpressionAButton" type="Button" parent="SelectionLayer/ImpressionButtons"]
+custom_minimum_size = Vector2(76, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+text = "A가 더 신뢰됨"
+
+[node name="ImpressionBButton" type="Button" parent="SelectionLayer/ImpressionButtons"]
+custom_minimum_size = Vector2(76, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+text = "B가 더 신뢰됨"
+
+[node name="ImpressionHoldButton" type="Button" parent="SelectionLayer/ImpressionButtons"]
+custom_minimum_size = Vector2(76, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+text = "판단 보류"
+
+[node name="RevealContinueButton" type="Button" parent="SelectionLayer"]
+visible = false
+offset_left = 112.0
+offset_top = 151.0
+offset_right = 208.0
+offset_bottom = 174.0
+theme_override_font_sizes/font_size = 7
+text = "최종 결정으로"
+
+[node name="AbandonButton" type="Button" parent="SelectionLayer"]
+visible = false
+offset_left = 111.0
+offset_top = 151.0
+offset_right = 209.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(1, 0.333333, 0.45098, 1)
+theme_override_colors/font_hover_color = Color(1, 0.333333, 0.45098, 1)
+theme_override_font_sizes/font_size = 7
+text = "둘 다 영구 포기"
+
+[node name="ConfirmOverlay" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0784314, 0.196078, 0.290196, 0.82)
+
+[node name="ConfirmPanel" type="Panel" parent="ConfirmOverlay"]
+offset_left = 56.0
+offset_top = 42.0
+offset_right = 264.0
+offset_bottom = 138.0
+
+[node name="Title" type="Label" parent="ConfirmOverlay/ConfirmPanel"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 198.0
+offset_bottom = 27.0
+theme_override_font_sizes/font_size = 9
+text = "선택을 확정할까요?"
+horizontal_alignment = 1
+
+[node name="Body" type="Label" parent="ConfirmOverlay/ConfirmPanel"]
+offset_left = 12.0
+offset_top = 33.0
+offset_right = 196.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(0.333333, 0.447059, 0.52549, 1)
+theme_override_font_sizes/font_size = 6
+text = "이 선택은 되돌릴 수 없습니다."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ConfirmButton" type="Button" parent="ConfirmOverlay/ConfirmPanel"]
+offset_left = 22.0
+offset_top = 67.0
+offset_right = 98.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(1, 0.333333, 0.45098, 1)
+theme_override_colors/font_hover_color = Color(1, 0.333333, 0.45098, 1)
+theme_override_font_sizes/font_size = 7
+text = "영구 확정"
+
+[node name="CancelButton" type="Button" parent="ConfirmOverlay/ConfirmPanel"]
+offset_left = 110.0
+offset_top = 67.0
+offset_right = 186.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 7
+text = "다시 보기"
+
+[node name="ResultOverlay" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.909804, 0.968627, 1, 1)
+
+[node name="ResultPanel" type="Panel" parent="ResultOverlay"]
+offset_left = 38.0
+offset_top = 40.0
+offset_right = 282.0
+offset_bottom = 143.0
+
+[node name="Title" type="Label" parent="ResultOverlay/ResultPanel"]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 232.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0, 0.721569, 0.85098, 1)
+theme_override_font_sizes/font_size = 10
+text = "동행자가 확정되었습니다"
+horizontal_alignment = 1
+
+[node name="Body" type="Label" parent="ResultOverlay/ResultPanel"]
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 228.0
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 7
+text = "선택 결과가 자동 저장되었습니다."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ReturnTitleButton" type="Button" parent="ResultOverlay/ResultPanel"]
+offset_left = 72.0
+offset_top = 78.0
+offset_right = 172.0
+offset_bottom = 98.0
+theme_override_font_sizes/font_size = 7
+text = "타이틀로 돌아가기"
