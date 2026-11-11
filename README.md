@@ -22,9 +22,10 @@
 3. `docs/PROJECT_STATUS.md` — 현재 진행 상황과 다음 작업
 4. `docs/ROADMAP.md` — 전체 개발 순서, 체크리스트, 단계별 완료 기준
 5. `docs/PROLOGUE_SELECTION_SPEC.md` — 프롤로그와 첫 후보 선택 상세 기획
-6. `docs/GAME_DESIGN.md` — 게임 기획의 작업용 Markdown 요약
-7. `docs/DECISIONS.md` — 결정 이력과 변경 이유
-8. `docs/이월짱_로그아웃할_수_없습니다_종합_게임_기획서.docx` — 편집 가능한 종합 기획서
+6. `docs/KUNAI_SHOOTER_CONCEPT.md` — 세로 스크롤 쿠나이 전투 제안과 검증 기준
+7. `docs/GAME_DESIGN.md` — 게임 기획의 작업용 Markdown 요약
+8. `docs/DECISIONS.md` — 결정 이력과 변경 이유
+9. `docs/이월짱_로그아웃할_수_없습니다_종합_게임_기획서.docx` — 편집 가능한 종합 기획서
 
 ## 저장소 구조
 
@@ -39,6 +40,7 @@
 │   ├── DECISIONS.md
 │   ├── GAME_DESIGN.md
 │   ├── HANDOFF.md
+│   ├── KUNAI_SHOOTER_CONCEPT.md
 │   ├── PROLOGUE_SELECTION_SPEC.md
 │   ├── PROJECT_STATUS.md
 │   ├── ROADMAP.md
